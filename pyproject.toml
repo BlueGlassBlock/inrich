@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "inrich"
+version = "0.0.1"
+description = "InRich is a simple library that adds simple input handlers to the great Rich."
+authors = ["BlueGlassBlock <blueglassblock@outlook.com>"]
+packages = [{include = "inrich", from = "src"}]
+license = "MIT"
+repository = "https://github.com/BlueGlassBlock/inrich"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Environment :: Console",
+    "Programming Language :: Python :: 3",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Typing :: Typed"
+]
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 110
+target-version = ['py39']
+
+[tool.poetry.dependencies]
+python = "^3.6.3"
+rich = ">=10.0.0, <13.0.0"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+isort = "^5.10.1"
+flake8 = "^4.0.1"
+pre-commit = "^2.17.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
